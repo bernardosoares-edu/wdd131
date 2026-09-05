@@ -131,7 +131,8 @@ main>h1 {
 
 .card-content img {
   width: 130px;
-  height: auto;
+  height: 130px;
+  object-fit: cover;
   border-radius: 4px;
   flex-shrink: 0;
 }
