@@ -1,6 +1,3 @@
-/* base.css - Versão em PT igual da foto da Rubia - CORRIGIDO */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
- 
 :root {
   --cor-primaria: #0b4d6b;
   --cor-nav: #222;
@@ -9,21 +6,25 @@
   --cor-texto: #333;
   --cor-amarelo-footer: #f7e98e;
 }
- 
-* { margin:0; padding:0; box-sizing:border-box; }
- 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--cor-texto);
 }
- 
+
 header {
   background: var(--cor-primaria);
   color: white;
   padding: 1.5rem 1.5rem 0 1.5rem;
   text-align: center;
 }
- 
+
 #course-title {
   display: block;
   font-weight: 700;
@@ -34,8 +35,7 @@ header {
   color: white;
   line-height: 1.2;
 }
- 
-/* NAV com FLEX - CORREÇÃO */
+
 nav {
   background: var(--cor-nav);
   display: flex;
@@ -44,7 +44,7 @@ nav {
   width: 100%;
   padding: 0;
 }
- 
+
 nav a {
   color: white;
   text-decoration: none;
@@ -56,15 +56,14 @@ nav a {
   text-align: center;
   border-bottom: 3px solid transparent;
 }
- 
+
 nav a:hover {
   background-color: #444;
   color: #f2c14e;
   text-decoration: none;
   border-bottom: 3px solid #f2c14e;
 }
- 
-/* CORREÇÃO PRINCIPAL DO GRID */
+
 main {
   max-width: 1100px;
   margin: 1.5rem auto;
@@ -73,33 +72,32 @@ main {
   gap: 1.2rem;
   padding: 0 1rem;
 }
- 
-main > h1 {
-  grid-column: 1 / 3; /* ocupa as 2 colunas */
+
+main>h1 {
+  grid-column: 1 / 3;
   text-align: center;
   margin-bottom: 0.5rem;
   grid-row: 1;
 }
- 
-/* Força o primeiro card (Sobre Mim) ficar na esquerda e o segundo na direita */
+
 .card:nth-of-type(1) {
   grid-column: 1 / 2;
   grid-row: 2;
 }
- 
+
 .card:nth-of-type(2) {
   grid-column: 2 / 3;
   grid-row: 2;
 }
- 
+
 .card {
   border: 1px solid var(--cor-borda);
   border-radius: 10px;
   background: var(--cor-fundo-card);
   overflow: hidden;
-  min-width: 0; /* evita esmagar o card */
+  min-width: 0;
 }
- 
+
 .card h2 {
   background: var(--cor-primaria);
   color: white;
@@ -107,68 +105,71 @@ main > h1 {
   padding: 0.7rem;
   font-size: 1.1rem;
 }
- 
+
 .card h3 {
   text-align: center;
   margin-top: 1rem;
 }
- 
+
 .card hr {
   width: 70%;
   margin: 0.5rem auto 1rem auto;
   opacity: 0.5;
 }
- 
+
 .card-content {
   display: flex;
   padding: 1rem;
   gap: 1rem;
   min-width: 0;
 }
- 
+
 .card-content p {
   flex: 1;
   min-width: 0;
 }
- 
+
 .card-content img {
   width: 130px;
   height: auto;
   border-radius: 4px;
-  flex-shrink: 0; /* impede a foto de esmagar */
+  flex-shrink: 0;
 }
- 
+
 .place {
   display: flex;
   gap: 1rem;
   padding: 0 1rem 1rem 1rem;
   min-width: 0;
 }
- 
+
 .place figure {
   text-align: center;
   font-size: 0.75rem;
   font-style: italic;
   flex-shrink: 0;
 }
- 
+
 .place img {
   width: 100px;
   height: auto;
   border: 1px solid #ddd;
 }
- 
+
 .place p {
   flex: 0 1 55%;
   max-width: 45%;
   min-width: 0;
 }
- 
+
 .card ul {
   padding: 2rem 2.5rem;
 }
-.card li { margin-bottom: 0.6rem; }
- 
+
+.card li {
+  margin-bottom: 0.6rem;
+}
+
 footer {
   background: var(--cor-primaria);
   color: white;
@@ -176,7 +177,7 @@ footer {
   padding: 1.2rem;
   margin-top: 1rem;
 }
- 
+
 #ultimaModificacao {
   color: var(--cor-amarelo-footer);
   font-size: 0.85rem;
