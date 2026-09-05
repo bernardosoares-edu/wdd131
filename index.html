@@ -6,86 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Fundamentos da Web Dinâmica - Bernardo Soares</title>
     <meta name="description"
-      content="Conheça a história, missão e visão da Magú Rafting. 
-      Uma empresa de rafting comprometida com segurança, aventura e preservação dos rios do Brasil.">
+      content="WDD 131 - Fundamentos da Web Dinâmica, Bernardo Soares - 
+      Página de projetos e estudos sobre HTML, CSS, JavaScript e design responsivo com layouts básicos e Santo Graal.">
     <meta name="author" content="Bernardo Soares da Silva Filho">
-    <link rel="stylesheet" href="estilos/rafting.css">
+    <link rel="stylesheet" href="estilos/base.css">
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img src="imagens/logo-rafting.png" alt="Logotipo Magú Rafting" width="150" height="150">
+        <h1>WDD 131: Fundamentos da Web Dinâmica - Bernardo Soares da S. Filho</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="passeios.html">Passeios</a></li>
-                <li><a href="contato.html">Fale Conosco</a></li>
-            </ul>
+            <a href="http://www.linkedin.com/in/bernardo-soares">LinkedIn</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=por">Escritura</a>
+            <a href="#">Projeto Final</a>
         </nav>
 
     </header>
 
     <main>
-        <div class="hero-home">
-            <img src="imagens/hero.jpg" alt="Grupo fazendo rafting no Rio Magú">
-            <h1>"Onde o rio te chama e a aventura responde."</h1>
-        </div>
-
-
-        <section class="cta">
-            <h2>Pronto para descer as corredeiras?</h2>
-            <p>Conheça nossos passeios e garanta sua vaga na próxima aventura!</p>
-            <a href="passeios.html" class="btn">Ver Passeios</a> <!-- link para passeios.html -->
-        </section>
-
-
-        <section class="newsletter-home">
-            <h2>Receba Novidades e Promoções</h2>
-            <form action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-
-                <button type="submit">Inscrever</button>
-            </form>
-        </section>
-
-
-        <section class="grid-inicial">
-            <div class="grid-item">
-                <img src="imagens/equipe-rafting.jpg"
-                  alt="Grupo de pessoas fazendo rafting em corredeira">
-                <h3>Nossa Finalidade</h3>
-                <p>Conectar pessoas com a natureza através de aventuras seguras, guiadas por
-                    profissionais apaixonados e com total respeito aos rios do Maranhão.</p>
+        <h1>Bernardo Soares da S. Filho</h1>
+        <section class="card">
+            <h2>Sobre Mim</h2>
+            <div class="card-content">
+                <div>
+                    <p>
+                        Olá! Meu nome é Bernardo Soares. Sou natural de Parnaíba, Piauí,
+                        mas atualmente moro em São José dos Campos, São Paulo.
+                    </p>
+                    <p>
+                        Trabalho como Auditor de Dados Mestres, garantindo a qualidade e
+                        integridade dos dados da empresa. Sou pai de 3 filhos, que são
+                        minha maior motivação diária. Nas horas vagas, você vai me encontrar
+                        jogando futebol, que é minha paixão desde criança.
+                    </p>
+                    <p>
+                        Estou estudando Desenvolvimento Web na BYU para unir minha experiência
+                        com dados e tecnologia para criar soluções ainda melhores.
+                    </p>
+                </div>          
+                <img src="imagens/bernardo.jpg" alt="Foto Perfil de Bernardo Soares">
             </div>
-            <div class="grid-item">
-                <img src="imagens/turbulencia-miarim.jpg"
-                  alt="Bote de Rafting com pessoas de colete vermelho em corredeira">
-                <h3>Nossas Ofertas</h3>
-                <p>Temos passeios para todos os níveis: do iniciante ao aventureiro. Pacotes em
-                    família,
-                    corporativos e experiências exclusivas no Rio Magú e afluentes.</p>
-            </div>
+            <h3>Parnaíba, Piauí</h3>
+            <hr>
+            <div class="place">
+                <figure>
+                    <img src="imagens/bandeira-piaui.jpg" alt="Bandeira Oficial do Piauí" width="200">
+                    <figcaption>Bandeira Oficial do Piauí</figcaption>
+                </figure>
+                <p>
+                    Parnaíba é um município do estado do Piauí, conhecido por abrigar
+                    o Delta do Parnaíba, o único delta em mar aberto das Américas e um
+                    dos mais bonitos do mundo. A região possui 5% das espécies de plantas
+                    e animais do mundo e é famosa por suas praias, dunas e o artesanato local.
+                </p>
+            </div>      
         </section>
+        <section class="card">
+            <h2>Recursos Web Dev</h2>
+            <ul>
+                <li><a href="https://dev.to/" target="_blank">Comunidade Dev.to</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Revista Smashing</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://picsum.photos/" target="_blank">Imagem de Espaço Reservado Lorem Picsum</a></li>
+            </ul>
+        </section>
+            
     </main>
     <footer>
-        <p>©2026 Magú Rafting | Desenvolvido por Bernardo Soares</p>
-        <nav class="redes-sociais">
-            <a href="https://facebook.com" target="_blank">
-                <img src="imagens/facebook.svg" alt="Ícone do Facebook">
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <img src="imagens/linkedin.svg" alt="Ícone do linkedin">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="imagens/instagram.svg" alt="Ícone do instagram">
-            </a>
-        </nav>
-
+        <p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
+        <p id="ultimaModificacao"></p>
+        
     </footer>
 
 </body>
