@@ -24,16 +24,15 @@ header {
   text-align: center;
 }
  
-header h1 {
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
-  padding-bottom: 1.5rem;
-}
- 
-header span {
+#course-title {
   display: block;
   font-weight: 700;
-  color: #f2e96d;
+  font-family: 'Merriweather', serif;
+  padding: 0.8rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1.2;
 }
  
 /* NAV com FLEX - CORREÇÃO */
