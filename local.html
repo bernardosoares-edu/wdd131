@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Página do País - Bernardo Soares da Silva Filho</title>
+    <meta name="description"
+      content="WDD 131 - Página da Groenlândia com dados geográficos, população, capital, idiomas, moeda e clima com cálculo de sensação térmica e design responsivo.">
+    <meta name="author" content="Bernardo Soares da Silva Filho">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-midia.css">
+    <script src="scripts/local.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Groenlândia</h1>
+        
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="imagens/principal-grande.webp" media="(min-width: 1000px)">
+                <source srcset="imagens/principal-media.webp" media="(min-width: 500px)">
+                <img src="imagens/principal-pequena.webp" alt="Groenlândia" width="500" height="250">
+            </picture>
+
+             <section class="card data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 2,166,086 sq km</p>
+                <p><strong>Population:</strong> 56,583</p>
+                <p><strong>Capital:</strong> Nuuk</p>
+                <p><strong>Languages:</strong> Greenlandic, Danish</p>
+                <p><strong>Currency:</strong> Danish Krone</p>
+                <p><strong>Time Zone:</strong> UTC-3</p>
+                <p><strong>Calling Code:</strong> +299</p>
+                <p><strong>Internet TLD:</strong> .gl</p>
+            </section>
+            <section class="card weather">
+                <h2 class="clima-titulo">Weather</h2>
+                <div class="icone-clima">
+                    <img src="imagens/sol-nuvem.svg" alt="Parcialmente nublado" width="24" height="24">
+                </div>
+                <p><strong>Temperature:</strong> <span id="temperatura">-10</span> °C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="vento">12</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="sensacao"></span></p>
+            </section>
+            
+        </div>    
+    </main>
+    <footer>
+        <p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
+        <p id="ultimaModificacao"></p>
+
+    </footer>
+</body>
+</html>

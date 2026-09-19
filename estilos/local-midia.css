@@ -1,0 +1,62 @@
+ 
+@media (min-width: 800px) {
+
+  .hero { position: relative; height: 600px; }
+
+  .hero picture img { height: 600px; object-fit: cover; }
+
+  .card { position: absolute; width: 280px; background: rgba(255,255,255,0.9); }
+
+  .card.data { top: 40px; left: 20px; }
+
+  .card.weather { bottom: 40px; right: 20px; }
+
+  .card h2 {
+
+    margin: 0 0 1rem -1.5rem;
+
+    width: 85%;
+
+    text-align: left;
+
+  }
+
+  .card p {
+
+    display: flex;
+
+    gap: 8px;
+
+    justify-content: flex-start;
+
+    padding-left: 1.2rem;
+
+    margin: 0.4rem 0;
+
+    width: auto;
+
+  }
+
+  .card p strong {
+
+    min-width: 105px;
+
+    text-align: right;
+
+   
+
+  }
+
+  /* DESKTOP: esconde SVG e usa pseudo-elemento*/
+
+  .icone-clima { display: none; }
+
+  .clima-titulo::after {
+
+    content: " ⛅";
+
+    margin-left: 10px;
+
+  }
+
+}
