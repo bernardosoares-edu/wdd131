@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+ 
+h1 {
+    padding: 20px;
+}
+ 
+img {
+    display: block; /* DICA do requisito 8 */
+    margin: 20px auto; /* centraliza independente do tamanho da tela */
+    width: 400px;
+    height: 600px;
+    background-color: #000; /* começa preto */
+    animation: esmaecer 1.5s ease-in;
+}
+ 
+@keyframes esmaecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+ 
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f1f1f1;
+}
