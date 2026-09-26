@@ -1,0 +1,16 @@
+@media (min-width: 640px) {
+  #menu {
+    display: none;
+  }
+ 
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+ 
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
