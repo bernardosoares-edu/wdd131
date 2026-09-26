@@ -3,7 +3,7 @@
   --cor-fundo-pagina: #f4f4f4;
   --cor-fundo-card: #ddd;
   --cor-borda-card: #bbb;
-  --cor-destaque: #6a1b9a;
+  --cor-destaque: #4a148c;
   --cor-sombra: #424242;
   --cor-texto-claro: white;
   --cor-texto-escuro: #333;
@@ -16,7 +16,7 @@ header { background:var(--cor-primaria); color:var(--cor-texto-claro); padding:1
 nav { display:none; flex-direction:column; background:var(--cor-primaria); width:100%; }
 nav.open { display:flex; }
 nav a { color:var(--cor-texto-claro); text-decoration:none; padding:0.8rem; text-align:center; }
-nav a:hover{ background-color: var(--cor-destaque);}
+nav a:hover{ background-color: var(--cor-texto-escuro);}
 main { max-width:1200px; margin:0 auto; padding:1rem; }
 main h2 { text-align:center; margin:1rem 0; }
  
