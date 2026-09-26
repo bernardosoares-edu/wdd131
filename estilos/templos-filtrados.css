@@ -16,6 +16,7 @@ header { background:var(--cor-primaria); color:var(--cor-texto-claro); padding:1
 nav { display:none; flex-direction:column; background:var(--cor-primaria); width:100%; }
 nav.open { display:flex; }
 nav a { color:var(--cor-texto-claro); text-decoration:none; padding:0.8rem; text-align:center; }
+nav a:hover{ background-color: var(--cor-destaque);}
 main { max-width:1200px; margin:0 auto; padding:1rem; }
 main h2 { text-align:center; margin:1rem 0; }
  
