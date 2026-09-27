@@ -71,7 +71,7 @@ const templos = [
     localizacao: "Curitiba, Brasil",
     consagracao: "2008, 1 de junho",
     area: 27850,
-    urlDaImagem: "https://churchofjesuschristtemples.org/assets/img/temples/curitiba-brazil-temple/curitiba-brazil-temple-1078-main.jpg"
+    urlDaImagem: "imagens/templo-de-curitiba.jpg"
   },
   {
     nomeDoTemplo: "São Paulo Brasil",
@@ -85,7 +85,7 @@ const templos = [
     localizacao: "Rio de Janeiro, Brasil",
     consagracao: "2022, 8 de maio",
     area: 29966,
-    urlDaImagem: "https://churchofjesuschristtemples.org/assets/img/temples/rio-de-janeiro-brazil-temple/rio-de-janeiro-brazil-temple-8167-main.jpg"
+    urlDaImagem: "imagens/templo-rio-de-janeiro.jpg"
   },
 ];
  
