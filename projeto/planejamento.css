@@ -1,0 +1,129 @@
+:root {
+  --areia: #F4E4BC;
+  --terracota: #722915;
+  --oceano: #0A4A70;
+  --texto: #2E2E2E;
+  --branco: #FFFFFF;
+  --fonte-titulo: 'Merriweather', serif;
+  --fonte-texto: 'Open Sans', sans-serif;
+}
+ 
+body {
+  font-family: var(--fonte-texto);
+  color: var(--texto);
+  background-color: var(--branco);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+ 
+header {
+  background-color: var(--oceano);
+  color: var(--branco);
+  padding: 20px;
+  text-align: center;
+}
+ 
+header h1 {
+  font-family: var(--fonte-titulo);
+  margin: 0;
+}
+ 
+h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--terracota);
+  background-color: var(--areia);
+  padding: 10px;
+  border-left: 5px solid var(--terracota);
+}
+ 
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--oceano);
+}
+ 
+.box {
+  border: 1px solid var(--areia);
+  padding: 20px;
+  margin-bottom: 25px;
+  background: var(--branco);
+  border-radius: 4px;
+}
+ 
+.tabela-cores {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.tabela-cores th, .tabela-cores td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.tabela-cores th {
+  background-color: var(--oceano);
+  color: var(--branco);
+}
+ 
+.cor {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.cor-areia { background-color: var(--areia); }
+.cor-terracota { background-color: var(--terracota); }
+.cor-oceano { background-color: var(--oceano); }
+.cor-texto { background-color: var(--texto); }
+.cor-branco { background-color: var(--branco); border: 1px solid #ccc; }
+ 
+.fonte-merriweather {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.4em;
+}
+.fonte-opensans {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.exemplo-titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--oceano);
+  margin-top: 20px;
+}
+.exemplo-texto {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  line-height: 1.6;
+}
+ 
+.img-wireframe,
+.img-wireframe-mobile {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 15px auto 25px auto;
+  display: block;
+  border-radius: 4px;
+}
+ 
+.img-wireframe {
+  max-width: 600px;
+}
+ 
+.img-wireframe-mobile {
+  max-width: 320px;
+}
+footer {
+    background: var(--oceano); 
+    color: white; 
+    text-align: center; 
+    padding: 0.2rem 0; 
+    margin-top: 1rem; 
+    line-height: 0.4rem;
+    font-size: 0.8rem;
+}
