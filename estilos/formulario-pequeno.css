@@ -66,6 +66,7 @@ width: 100%;
 padding: 0.7rem;
 border: 1px solid #aaa;
 border-radius: 4px;
+font-size: 0.8rem; /* CORREÇÃO 1: tava faltando */
 }
  
 .fw1 input:required, .fw1 select:required {
@@ -101,25 +102,65 @@ font-size: 0.8rem;
 background-color: var(--azul);
 }
  
-.check, .nota {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 6px 0;
-  padding: 4px 0;
+/* CORREÇÃO 2: separei o checkbox da nota */
+ 
+.check {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 6px 0;
+padding: 4px 0;
 }
  
-.check input[type="checkbox"],
+.check input[type="checkbox"] {
+width: auto;
+margin: 0;
+flex-shrink: 0;
+}
+ 
+.check label {
+margin: 0;
+padding: 0;
+display: inline;
+line-height: 1.2;
+}
+ 
+/* 5 estrelinhas lado a lado - ALINHADAS */
+fieldset:has(.nota) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+ 
+.nota {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 6px 2px;
+  gap: 6px;
+}
+ 
 .nota input[type="radio"] {
-  width: auto;
+  width: 16px;
+  height: 16px;
   margin: 0;
   flex-shrink: 0;
 }
  
-.check label,
 .nota label {
+  width: 100%;
   margin: 0;
   padding: 0;
-  display: inline;
-  line-height: 1.2;
+  display: block;
+  text-align: center;
+  line-height: 1.1;
+  white-space: nowrap;
+  font-size: 0.8rem;
 }
