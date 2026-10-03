@@ -29,34 +29,66 @@
         <form method="get" action="avaliacao.html" class="fw1">
             <fieldset>
                 <legend>Informações do Produto</legend>
-                <label>Nome do Produto*
-                    <select id="produto" name="produto" required>
-                        <option value="" disabled selected>Selecione um Produto...</option>
-                    </select>
-                </label>
-            </fieldset>
-        
-            <fieldset>
-                <legend>Classificação Geral*</legend>
-                <div>Selecione a nota</div>
-                <label><input type="radio" id="estrela1" name="classificacao" value="1" required> ☆</label>
-                <label><input type="radio" id="estrela2" name="classificacao" value="2" required> ☆☆</label>
-                <label><input type="radio" id="estrela3" name="classificacao" value="3" required> ☆☆☆</label>
-                <label><input type="radio" id="estrela4" name="classificacao" value="4" required> ☆☆☆☆</label>
-                <label><input type="radio" id="estrela5" name="classificacao" value="5" required> ☆☆☆☆☆</label> 
-            </fieldset>               
-            <fieldset>
-                <legend>Detalhes da Instalação</legend>
-                <label>Data de Instalação <input type="date" id="dataInstalacao" name="dataInstalacao" required></label>
+                <label for="produto">Nome do Produto*</label>
+                <select id="produto" name="produto" required>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                </select>
             </fieldset>
             
             <fieldset>
+            <legend>Classificação Geral*</legend>
+            <div>Selecione a nota</div>
+            
+            <div class="nota">
+                <input type="radio" id="estrela1" name="classificacao" value="1" required>
+                <label for="estrela1">☆</label>
+            </div>
+            
+            <div class="nota">
+                <input type="radio" id="estrela2" name="classificacao" value="2" required>
+                <label for="estrela2">☆☆</label>
+            </div>
+            
+            <div class="nota">
+                <input type="radio" id="estrela3" name="classificacao" value="3" required>
+                <label for="estrela3">☆☆☆</label>
+            </div>
+            
+            <div class="nota">
+                <input type="radio" id="estrela4" name="classificacao" value="4" required>
+                <label for="estrela4">☆☆☆☆</label>
+            </div>
+            
+            <div class="nota">
+                <input type="radio" id="estrela5" name="classificacao" value="5" required>
+                <label for="estrela5">☆☆☆☆☆</label>
+            </div>
+            </fieldset>
+            <fieldset>
+                <label for="dataInstalacao">Data de Instalação</label>
+                <input type="date" id="dataInstalacao" name="dataInstalacao" required>
+            </fieldset>
+
+            <fieldset>
                 <legend>Recursos Úteis</legend>
                 <div>Quais recursos você achou úteis? <span class="instrucao">(Marque todos que se aplicam)</span></div>
-                <label><input type="checkbox" id="recursoDurabilidade" name="durabilidade" value="durabilidade"> Durabilidade</label>
-                <label><input type="checkbox" id="recursoFacilidade" name="facilidade" value="facilidade"> Facilidade de Uso</label>
-                <label><input type="checkbox" id="recursoDesempenho" name="desempenho" value="desempenho"> Desempenho</label>
-                <label><input type="checkbox" id="recursoDesign" name="design" value="design"> Design</label>
+                
+                <div class="check">
+                    <input type="checkbox" id="recursoDurabilidade" name="durabilidade" value="durabilidade">
+                    <label for="recursoDurabilidade">Durabilidade</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="recursoFacilidade" name="facilidade" value="facilidade">
+                    <label for="recursoFacilidade">Facilidade de Uso</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="recursoDesempenho" name="desempenho" value="desempenho">
+                    <label for="recursoDesempenho">Desempenho</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="recursoDesign" name="design" value="design">
+                    <label for="recursoDesign">Design</label>
+                </div>
             </fieldset>
             
             <fieldset>

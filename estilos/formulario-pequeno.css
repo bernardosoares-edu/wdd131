@@ -1,103 +1,125 @@
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 :root {
-  --azul: #1d3557;
-  --azul-claro: #457b9d;
-  --fundo: #f1faee;
-  --destaque: #e63946;
-  --branco: #ffffff;
-  --cor-instrucao-opcional: #0d3550;
+--azul: #1d3557;
+--azul-claro: #457b9d;
+--fundo: #f1faee;
+--destaque: #e63946;
+--branco: #ffffff;
+--cor-instrucao-opcional: #0d3550;
 }
  
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: var(--fundo);
+font-family: "Open Sans", sans-serif;
+background-color: var(--fundo);
 }
  
 header, footer {
-  background-color: var(--azul);
-  color: var(--branco);
-  text-align: center;
-  padding: 0.1rem;
-  font-family: "Merriweather", serif;
+background-color: var(--azul);
+color: var(--branco);
+text-align: center;
+padding: 0.1rem;
+font-family: "Merriweather", serif;
 }
 footer {
-  font-size: 0.8rem;
+font-size: 0.8rem;
 }
  
 main {
-  max-width: 600px;
-  margin: 1rem auto;
-  padding: 1rem;
+max-width: 600px;
+margin: 1rem auto;
+padding: 1rem;
 }
-
+ 
 .fw1 fieldset {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f2f4f6;
-  margin-bottom: 1.2rem;
-  padding: 0.5rem;
-  min-width: 0;
+border: 1px solid #ccc;
+border-radius: 8px;
+background: #f2f4f6;
+margin-bottom: 1.2rem;
+padding: 0.5rem;
+min-width: 0;
 }
  
 .fw1 legend {
-  font-weight: 600;
-  color: var(--azul);
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-  margin-bottom: 0;
+font-weight: 600;
+color: var(--azul);
+padding: 0 0.5rem;
+margin-left: 0.5rem;
+margin-bottom: 0;
 }
  
 .fw1 label {
-  display: block;
-  margin: 0.25rem 0 0.75rem 0;
-  font-size: 0.8rem;
+display: block;
+margin: 0.25rem 0 0.75rem 0;
+font-size: 0.8rem;
 }
 .fw1 div {
-  font-size: 0.8rem;
+font-size: 0.8rem;
 }
  
 .fw1 input[type="text"],
 .fw1 input[type="date"],
 .fw1 select,
 .fw1 textarea {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+width: 100%;
+padding: 0.7rem;
+border: 1px solid #aaa;
+border-radius: 4px;
 }
  
 .fw1 input:required, .fw1 select:required {
-  border-left: 4px solid var(--destaque);
+border-left: 4px solid var(--destaque);
 }
  
 .fw1 input:required:valid, .fw1 select:required:valid {
-  border-left: 4px solid green;
+border-left: 4px solid green;
 }
 .fw1 input[type="submit"] {
-  width: 100%;
-  background-color: var(--azul-claro);
-  color: white;
-  padding: 1rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  margin: 0.5rem 0 1.5rem 0;
-  font-display: block;
+width: 100%;
+background-color: var(--azul-claro);
+color: white;
+padding: 1rem;
+border: none;
+border-radius: 8px;
+font-size: 1.1rem;
+cursor: pointer;
+margin: 0.5rem 0 1.5rem 0;
 }
 .opcional, .instrucao {
-  color: var(--cor-instrucao-opcional);
-  font-weight: 400;
-  font-size: 0.85em;
-  font-style: italic;
+color: var(--cor-instrucao-opcional);
+font-weight: 400;
+font-size: 0.85em;
+font-style: italic;
 }
 .fw1 input::placeholder,
 .fw1 textarea::placeholder {
-  font-size: 0.8rem;
+font-size: 0.8rem;
 }
  
 .fw1 input[type="submit"]:hover {
-  background-color: var(--azul);
+background-color: var(--azul);
+}
+ 
+.check, .nota {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+  padding: 4px 0;
+}
+ 
+.check input[type="checkbox"],
+.nota input[type="radio"] {
+  width: auto;
+  margin: 0;
+  flex-shrink: 0;
+}
+ 
+.check label,
+.nota label {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  line-height: 1.2;
 }
