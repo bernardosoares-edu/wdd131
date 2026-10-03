@@ -1,0 +1,27 @@
+
+@media only screen and (min-width: 35rem) {
+ 
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+ 
+  header h1 {
+    font-size: 2rem;
+  }
+ 
+  .fw1 fieldset {
+    padding: 0.5rem;
+  }
+ 
+  /* No tablet os radios ficam lado a lado - melhor usabilidade */
+  .fw1 fieldset:nth-of-type(2) label {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+ 
+  .fw1 input[type="submit"] {
+    max-width: 700px;
+  }
+ 
+}

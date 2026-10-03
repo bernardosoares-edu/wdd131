@@ -1,0 +1,13 @@
+
+@media only screen and (min-width: 64rem) {
+ 
+  body main form.fw1 input[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin: 1rem 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+ 
+}
