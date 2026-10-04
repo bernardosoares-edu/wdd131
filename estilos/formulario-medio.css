@@ -1,4 +1,3 @@
-
 @media only screen and (min-width: 35rem) {
  
   main {
@@ -14,14 +13,43 @@
     padding: 0.5rem;
   }
  
-  /* No tablet os radios ficam lado a lado - melhor usabilidade */
-  .fw1 fieldset:nth-of-type(2) label {
+  /* ESSA É A REGRA QUE ESTAVA QUEBRANDO - AGORA NÃO PEGA NAS ESTRELAS */
+  .fw1 fieldset:nth-of-type(2):not(:has(.nota)) label {
     display: inline-block;
     margin-right: 1rem;
+  }
+ 
+  /* ESTRELAS NO TABLET - 5 NA MESMA LINHA */
+  .fw1 fieldset:has(.nota) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
+  .fw1 fieldset:has(.nota) > div:not(.nota) {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+ 
+  .fw1 fieldset:has(.nota) .nota {
+    width: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+  }
+ 
+  .fw1 fieldset:has(.nota) .nota label {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-right: 0;
+  }
+ 
+  .fw1 fieldset:has(.nota) .nota input {
+    margin: 0;
   }
  
   .fw1 input[type="submit"] {
     max-width: 700px;
   }
- 
 }

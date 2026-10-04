@@ -66,7 +66,7 @@ width: 100%;
 padding: 0.7rem;
 border: 1px solid #aaa;
 border-radius: 4px;
-font-size: 0.8rem; /* CORREÇÃO 1: tava faltando */
+font-size: 0.8rem;
 }
  
 .fw1 input:required, .fw1 select:required {
@@ -80,7 +80,7 @@ border-left: 4px solid green;
 width: 100%;
 background-color: var(--azul-claro);
 color: white;
-padding: 1rem;
+padding: 0.5rem;
 border: none;
 border-radius: 8px;
 font-size: 1.1rem;
@@ -101,8 +101,6 @@ font-size: 0.8rem;
 .fw1 input[type="submit"]:hover {
 background-color: var(--azul);
 }
- 
-/* CORREÇÃO 2: separei o checkbox da nota */
  
 .check {
 display: flex;
@@ -125,7 +123,6 @@ display: inline;
 line-height: 1.2;
 }
  
-/* 5 estrelinhas lado a lado - ALINHADAS */
 fieldset:has(.nota) {
   display: flex;
   flex-direction: row;
