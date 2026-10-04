@@ -124,24 +124,22 @@ line-height: 1.2;
 }
  
 fieldset:has(.nota) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 0;
+  display: block;
+}
+ 
+fieldset:has(.nota) > div:not(.nota) {
+  width: 100%;
+  margin-bottom: 8px;
 }
  
 .nota {
+  width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  flex: 1;
-  min-width: 0;
-  margin: 0;
-  padding: 6px 2px;
-  gap: 6px;
+  gap: 10px;
+  margin: 0 0 8px 0;
+  padding: 0;
 }
  
 .nota input[type="radio"] {
@@ -152,12 +150,12 @@ fieldset:has(.nota) {
 }
  
 .nota label {
-  width: 100%;
+  width: auto;
   margin: 0;
   padding: 0;
   display: block;
-  text-align: center;
+  text-align: left;
   line-height: 1.1;
   white-space: nowrap;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
