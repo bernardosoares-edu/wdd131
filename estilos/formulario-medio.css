@@ -13,13 +13,13 @@
     padding: 0.5rem;
   }
  
-  /* ESSA É A REGRA QUE ESTAVA QUEBRANDO - AGORA NÃO PEGA NAS ESTRELAS */
+  
   .fw1 fieldset:nth-of-type(2):not(:has(.nota)) label {
     display: inline-block;
     margin-right: 1rem;
   }
  
-  /* ESTRELAS NO TABLET - 5 NA MESMA LINHA */
+ 
   .fw1 fieldset:has(.nota) {
     display: flex;
     flex-wrap: wrap;
