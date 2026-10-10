@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gastronomia do Nordeste - do baião de dois ao acarajé, sabores do sertão ao mar">
+<meta name="author" content="Bernardo Soares">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<title>Gastronomia - Sertão ao Mar</title>
+</head>
+<body>
+<header><div class="header-content">
+<div class="logo">SERTÃO AO MAR 🌵🌊</div>
+<button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+<nav><ul id="nav-lista">
+<li><a href="index.html">Início</a></li>
+<li><a href="sertao.html">Sertão</a></li>
+<li><a href="litoral.html">Litoral</a></li>
+<li><a href="cultura.html">Cultura</a></li>
+<li><a href="gastronomia.html">Gastronomia</a></li>
+</ul></nav></div></header>
+
+<main>
+  <section class="hero">
+    <picture>
+      <img src="imagens/gastronomia.jpg" alt="Mesa nordestina" width="1200" height="600" loading="lazy">
+    </picture>
+      <div class="hero-texto">
+        <h1>Do Sertão ao Mar na Panela</h1>
+        <p>Dendê, carne de sol, coalho e coco. Uma cozinha que é resistência e festa.</p>
+      </div>
+  </section>
+
+  <div class="secionador">
+    <button data-filtro="todos" class="ativo" onclick="filtrarComidas('todos')">Todos</button>
+    <button data-filtro="sertao" onclick="filtrarComidas('sertao')">Sertão</button>
+    <button data-filtro="litoral" onclick="filtrarComidas('litoral')">Litoral</button>
+  </div>
+
+  <div id="lista-comidas" class="grid"></div>
+
+  <section style="margin-top:3rem;">
+    <h2>Mais Sabores pra Conhecer</h2>
+    <div class="grid">
+      <article class="card" data-tipo="sertao">
+        <img src="imagens/buchada-bode.jpg" alt="Buchada de bode prato típico" loading="lazy" width="600" height="400">
+        <div class="conteudo"><h3>Buchada de Bode</h3><p>Prato do sertanejo raiz. Vísceras bem temperadas cozidas no bucho.</p></div>
+      </article>
+      <article class="card" data-tipo="litoral">
+        <img src="imagens/caruru-vatapa.jpg" alt="Caruru com dendê" loading="lazy" width="600" height="400">
+        <div class="conteudo"><h3>Caruru e Vatapá</h3><p>Base de dendê, camarão, castanha e gengibre. Herança africana viva.</p></div>
+      </article>
+      <article class="card" data-tipo="sertao">
+        <img src="imagens/pacoca-carne-sol.jpg" alt="Paçoca de carne de sol" loading="lazy" width="600" height="400">
+        <div class="conteudo"><h3>Paçoca de Carne de Sol</h3><p>Carne socada no pilão com farinha e cebola. A comida do vaqueiro.</p></div>
+      </article>
+      <article class="card" data-tipo="litoral">
+        <img src="imagens/cocada-doce-coco.jpg" alt="Cocada e doces de coco" loading="lazy" width="600" height="400">
+        <div class="conteudo"><h3>Cocada e Doce de Coco</h3><p>Do Maranhão ao Rio Grande do Norte, o coco vira cocada branca, queimada e baba de moça.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section style="margin-top:3rem;">
+    <h2>Seus Favoritos</h2>
+    <ul id="favoritos-lista"></ul>
+    <p id="contador-fav"></p>
+  </section>
+
+  <section style="margin-top:3rem;">
+    <h2>Avalie um Prato</h2>
+    <form id="form-avaliacao">
+      <label>Seu nome: <input id="nome" type="text" required placeholder="Ex: Bernardo"></label>
+      <label>Prato: 
+        <select id="prato-select" required>
+          <option value="">Escolha...</option>
+          <option value="Baião de Dois">Baião de Dois</option>
+          <option value="Carne de Sol">Carne de Sol</option>
+          <option value="Acarajé">Acarajé</option>
+          <option value="Moqueca">Moqueca Baiana</option>
+          <option value="Tapioca">Tapioca</option>
+        </select>
+      </label>
+      <label>Nota: <select id="nota" required><option value="5">5 - Excelente</option><option value="4">4 - Muito bom</option><option value="3">3 - Bom</option><option value="2">2 - Regular</option><option value="1">1 - Ruim</option></select></label>
+      <label>Comentário: <textarea id="comentario" rows="3" placeholder="O que achou?"></textarea></label>
+      <button class="btn" type="submit">Enviar Avaliação</button>
+    </form>
+    <p id="msg-form"></p>
+  </section>
+</main>
+
+<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
+</body>
+</html>

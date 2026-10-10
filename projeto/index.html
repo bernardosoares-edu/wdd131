@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sertão ao Mar - portal cultural do Nordeste">
+<meta name="author" content="Bernardo Soares">
+<title>Sertão ao Mar - Início</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header><div class="header-content">
+<div class="logo">SERTÃO AO MAR 🌵🌊</div>
+<button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+<nav><ul id="nav-lista">
+<li><a href="index.html">Início</a></li>
+<li><a href="sertao.html">Sertão</a></li>
+<li><a href="litoral.html">Litoral</a></li>
+<li><a href="cultura.html">Cultura</a></li>
+<li><a href="gastronomia.html">Gastronomia</a></li>
+</ul></nav></div></header>
+<main>
+<section class="hero">
+  <picture>
+    <source srcset="imagens/sertao-mar.webp" media="(min-width: 600px)">
+    <img src="imagens/sertao-mar.webp" alt="Sertão nordestino encontrando o mar" width="1200" height="600" loading="lazy">
+  </picture>
+  <div class="hero-texto">
+    <h1>Do Chão Rachado ao Mar Infinito</h1>
+    <p>Um portal que conecta a resistência do sertão à beleza do litoral nordestino.</p>
+    <a href="gastronomia.html" class="btn">Explorar Sabores</a>
+    <p id="visitas">Visitas: 0</p>
+  </div>
+</section>
+<h2>Por que este portal?</h2>
+<div class="grid">
+<article class="card"><img src="imagens/vaqueiro.jpg" alt="Vaqueiro nordestino" loading="lazy" width="600" height="400"><div class="conteudo"><h3>Vida no Sertão</h3><p>Seca, fé, forró e força do povo.</p><a href="sertao.html" class="btn">Explorar</a></div></article>
+<article class="card"><img src="imagens/lencois.jpg" alt="Lençóis Maranhenses" loading="lazy" width="600" height="400"><div class="conteudo"><h3>Belezas do Litoral</h3><p>Dunas, coqueiros e moqueca.</p><a href="litoral.html" class="btn">Explorar</a></div></article>
+<article class="card"><img src="imagens/baiao.jpg" alt="Prato de baião" loading="lazy" width="600" height="400"><div class="conteudo"><h3>Sabores e Cultura</h3><p>Teste seu sotaque e favorite comidas.</p><a href="gastronomia.html" class="btn">Participar</a></div></article>
+</div>
+<h2>Quiz Rápido</h2>
+<div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
+<select id="quiz-resposta"><option value="">Escolha...</option><option value="forro">Forró e São João</option><option value="mar">Praia e dendê</option><option value="cacto">Sertão e resistência</option></select>
+<button class="btn" onclick="quizNordestino()">Descobrir</button></div>
+<div id="quiz-saida" style="margin-top:1rem"></div>
+</main>
+<footer>
+<p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
+<p id="ultimaModificacao"></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vida no Sertão - vaqueiro, seca, fé e resistência">
+<meta name="author" content="Bernardo Soares">
+<title>Sertão ao Mar - Sertão</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header><div class="header-content">
+<div class="logo">SERTÃO AO MAR 🌵🌊</div>
+<button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+<nav><ul id="nav-lista">
+<li><a href="index.html">Início</a></li>
+<li><a href="sertao.html">Sertão</a></li>
+<li><a href="litoral.html">Litoral</a></li>
+<li><a href="cultura.html">Cultura</a></li>
+<li><a href="gastronomia.html">Gastronomia</a></li>
+</ul></nav></div></header>
+
+<main>
+  <section class="hero">
+  <picture>
+    <img src="imagens/hero-sertao.jpg" alt="Vida no Sertão, seca, fé e força" width="1200" height="600" loading="lazy">
+    </picture>
+    <div class="hero-texto">
+      <h1>Vida no Sertão: Seca, Fé e Força</h1>
+      <p>Onde o chão racha, o povo não se curva. Conheça a resistência do vaqueiro e do sertanejo.</p>
+    </div>
+  </section>
+
+  <div class="secionador">
+    <button data-filtro="todos" class="ativo">Todos</button>
+    <button data-filtro="povo">Povo</button>
+    <button data-filtro="natureza">Natureza</button>
+    <button data-filtro="fe">Fé</button>
+  </div>
+
+  <div class="grid">
+    <article class="card" data-tipo="povo">
+      <img src="imagens/vaqueiro.jpg" alt="Vaqueiro nordestino com chapéu de couro" loading="lazy" width="600" height="400">
+      <div class="conteudo"><h3>O Vaqueiro</h3><p>Figura de couro, gibão e coragem. Desbrava a caatinga atrás do gado, com aboio que ecoa no sertão. Símbolo de resistência.</p></div>
+    </article>
+    <article class="card" data-tipo="natureza">
+      <img src="imagens/caatinga.jpg" alt="Caatinga com cactos e chão rachado" loading="lazy" width="600" height="400">
+      <div class="conteudo"><h3>A Caatinga Branca</h3><p>Único bioma só do Brasil. Quando chove, fica verde. Na seca, revela o chão rachado e os mandacarus de pé. Vida que teima.</p></div>
+    </article>
+    <article class="card" data-tipo="fe">
+      <img src="imagens/padre-cicero.webp" alt="Estátua do Padre Cícero em Juazeiro" loading="lazy" width="600" height="400">
+      <div class="conteudo"><h3>Fé e Romaria</h3><p>Padre Cícero em Juazeiro, Canudos e as procissões. A fé move o sertanejo mais que a chuva. Chapéu na mão e reza forte.</p></div>
+    </article>
+    <article class="card" data-tipo="povo">
+      <img src="imagens/casa-taipa.jpg" alt="Casa de taipa no sertão" loading="lazy" width="600" height="400">
+      <div class="conteudo"><h3>Casa de Taipa e Farinha</h3><p>Casa de barro, fogão a lenha e farinha na lata. Simplicidade que alimenta o Brasil com baião, carne de sol e paçoca.</p></div>
+    </article>
+  </div>
+</main>
+<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p></footer>
+</body>
+</html>
