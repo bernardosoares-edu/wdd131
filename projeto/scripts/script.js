@@ -32,9 +32,10 @@ function configurarSecionadores(){
         btn.classList.add("ativo");
         const filtro = btn.dataset.filtro;
         cards.forEach(card => {
-          card.style.display = (filtro === "todos" || card.dataset.tipo === filtro) ? "" : "none";
+          const mostrar = filtro === "todos" || card.dataset.tipo === filtro;
+          card.classList.toggle("oculto", !mostrar);
         });
-        if(typeof filtrarComidas === "function" && document.querySelector("#lista-comidas")){
+        if(document.querySelector("#lista-comidas")){
           filtrarComidas(filtro);
         }
       });
@@ -56,10 +57,15 @@ function renderizarComidas(filtro = "todos"){
           <h3>${comida.nome}</h3>
           <p><strong>Origem:</strong> ${comida.origem}</p>
           <p>${comida.desc}</p>
-          <button class="btn" onclick="favoritarComida(${comida.id})">${ehFav ? '★ Favoritado' : '☆ Favoritar'}</button>
+          <button class="btn btn-fav" data-id="${comida.id}">${ehFav ? '★ Favoritado' : '☆ Favoritar'}</button>
         </div>
       </article>`;
   }).join("");
+
+  // Event delegation sem onclick
+  container.querySelectorAll(".btn-fav").forEach(b => {
+    b.addEventListener("click", () => favoritarComida(Number(b.dataset.id)));
+  });
 }
 
 function filtrarComidas(tipo){
@@ -93,45 +99,26 @@ function configurarFormularioCultura(){
     const nome = form.querySelector("#nome").value.trim();
     const email = form.querySelector("#email").value.trim();
     const origem = document.querySelector("#origem")?.value;
-    if(!nome || !email) return alert("Preencha nome e e-mail.");
+    if(!nome || !email){
+      document.querySelector("#form-msg").textContent = "Preencha nome e e-mail.";
+      return;
+    }
     const lista = JSON.parse(localStorage.getItem("inscritosSertaoMar") || "[]");
     lista.push({ nome, email, origem, data: new Date().toLocaleDateString("pt-BR") });
     localStorage.setItem("inscritosSertaoMar", JSON.stringify(lista));
-    document.querySelector("#form-msg").innerHTML = `<p>Obrigado, <strong>${nome}</strong>!</p>`;
+    document.querySelector("#form-msg").innerHTML = `Obrigado, <strong>${nome}</strong>!`;
     form.reset(); atualizarContadorInscritos();
   });
 }
 
-function configurarFormularioGastronomia(){
-  const form = document.querySelector("#form-avaliacao");
-  if(!form) return;
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const dados = { nome: form.querySelector("#nome").value, prato: form.querySelector("#prato-select").value, nota: form.querySelector("#nota").value, comentario: form.querySelector("#comentario").value, data: new Date().toISOString() };
-    let lista = JSON.parse(localStorage.getItem("avaliacoes") || "[]");
-    lista.push(dados);
-    localStorage.setItem("avaliacoes", JSON.stringify(lista));
-    document.querySelector("#msg-form").textContent = `Obrigado ${dados.nome}! Avaliação salva. Total: ${lista.length}`;
-    form.reset();
-  });
-}
-
-function atualizarContadorInscritos(){
-  const el = document.querySelector("#contador-inscritos");
-  if(!el) return;
-  el.textContent = `${JSON.parse(localStorage.getItem("inscritosSertaoMar") || "[]").length} pessoa(s) inscrita(s)`;
-}
-
-// FUNÇÃO CORRIGIDA - NÃO CONTA A CADA PÁGINA
 function configurarFooter(){
   const anoEl = document.getElementById("anoatual");
   if(anoEl) anoEl.textContent = new Date().getFullYear();
   const modEl = document.getElementById("ultimaModificacao");
   if(modEl) modEl.textContent = `Última modificação: ${document.lastModified}`;
-
-  const jaContouNestaSessao = sessionStorage.getItem("sessaoContada");
+  const jaContou = sessionStorage.getItem("sessaoContada");
   let v = Number(localStorage.getItem("visitasSertaoMar")) || 0;
-  if(!jaContouNestaSessao){
+  if(!jaContou){
     v++;
     localStorage.setItem("visitasSertaoMar", v);
     sessionStorage.setItem("sessaoContada", "true");
@@ -147,28 +134,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarComidas(localStorage.getItem("filtroComida") || "todos");
   mostrarFavoritos();
   configurarFormularioCultura();
-  configurarFormularioGastronomia();
-  atualizarContadorInscritos();
   configurarFooter();
-  document.getElementById('btn-quiz')?.addEventListener('click', quizNordestino);
 });
-
-function quizNordestino(){
-  const select = document.getElementById('quiz-resposta');
-  const saida = document.getElementById('quiz-saida');
-  if(!select ||!saida) return;
-  const r = select.value;
-  if(!r){
-    saida.textContent = "Escolha uma opção primeiro!";
-    return;
-  }
-  const respostas = {
-    forro: "Boa! Forró é a alma do São João no Nordeste!",
-    baiao: "Delícia! Baião de Dois é patrimônio do sertão.",
-    lencois: "Lindo! Lençóis Maranhenses fica no Maranhão.",
-    vaqueiro: "Resistência! Vaqueiro é símbolo de força e fé do sertão."
-  };
-  saida.textContent = respostas[r];
-  localStorage.setItem("ultimoQuizSertao", r);
-}
-

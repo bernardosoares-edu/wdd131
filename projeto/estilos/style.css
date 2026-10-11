@@ -352,3 +352,8 @@ footer #ultimaModificacao, footer #visitas{
   background: #fff8ef;
   border-left: 5px solid #8d4e2b;
 }
+
+/* Classe para esconder cards no filtro - sem !important */
+.grid .card.oculto {
+  display: none;
+}

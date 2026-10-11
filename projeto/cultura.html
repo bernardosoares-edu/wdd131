@@ -68,9 +68,31 @@
     </article>
   </div>
 
-  <h2>Compartilhe sua tradição</h2>
-  <form id="form-contato"><label>Nome: <input id="nome" required></label><label>Email: <input id="email" type="email" required></label><label>Origem: <select id="origem"><option>Sertão</option><option>Litoral</option><option>Ambos</option></select></label><button class="btn">Enviar</button></form>
-  <p id="form-msg"></p><p id="contador-inscritos"></p>
+    <section class="form-secao">
+    <h2>Compartilhe sua tradição</h2>
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required autocomplete="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required autocomplete="email">
+
+      <label for="origem">Origem:</label>
+      <select id="origem" name="origem" required>
+        <option value="">Selecione...</option>
+        <option value="sertao">Sertão</option>
+        <option value="litoral">Litoral</option>
+        <option value="ambos">Ambos</option>
+      </select>
+
+      <label for="mensagem">Tradição:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Qual tradição você quer compartilhar?" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p id="form-msg"></p>
+    <p id="contador-inscritos"></p>
+  </section>
 </main>
 <footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
 </body>
