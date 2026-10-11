@@ -2,12 +2,14 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sertão ao Mar - portal cultural do Nordeste">
-<meta name="author" content="Bernardo Soares">
 <title>Sertão ao Mar - Início</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<meta name="description" content="Sertão ao Mar: do forró do interior às praias do litoral. Explore a cultura, gastronomia e tradições que fazem do Nordeste o coração do Brasil.">
+<meta name="author" content="Bernardo Soares">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos/style.css">
+<script src="scripts/script.js" defer></script>
 </head>
 <body>
 <header><div class="header-content">
@@ -24,13 +26,12 @@
 <section class="hero">
   <picture>
     <source srcset="imagens/sertao-mar.webp" media="(min-width: 600px)">
-    <img src="imagens/sertao-mar.webp" alt="Sertão nordestino encontrando o mar" width="1200" height="600" loading="lazy">
+    <img src="imagens/sertao-mar.webp" alt="Sertão nordestino encontrando o mar" width="1200" height="600" loading="eager" fetchpriority="high">
   </picture>
   <div class="hero-texto">
     <h1>Do Chão Rachado ao Mar Infinito</h1>
     <p>Um portal que conecta a resistência do sertão à beleza do litoral nordestino.</p>
     <a href="gastronomia.html" class="btn">Explorar Sabores</a>
-    <p id="visitas">Visitas: 0</p>
   </div>
 </section>
 <h2>Por que este portal?</h2>
@@ -40,14 +41,19 @@
 <article class="card"><img src="imagens/baiao.jpg" alt="Prato de baião" loading="lazy" width="600" height="400"><div class="conteudo"><h3>Sabores e Cultura</h3><p>Teste seu sotaque e favorite comidas.</p><a href="gastronomia.html" class="btn">Participar</a></div></article>
 </div>
 <h2>Quiz Rápido</h2>
-<div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
-<select id="quiz-resposta"><option value="">Escolha...</option><option value="forro">Forró e São João</option><option value="mar">Praia e dendê</option><option value="cacto">Sertão e resistência</option></select>
-<button class="btn" onclick="quizNordestino()">Descobrir</button></div>
-<div id="quiz-saida" style="margin-top:1rem"></div>
+<div class="quiz-container">
+  <label for="quiz-resposta" class="sr-only">Escolha a resposta do quiz</label>
+  <select id="quiz-resposta" aria-label="Escolha a resposta do quiz">
+    <option value="">Escolha...</option>
+    <option value="forro">Forró e São João</option>
+    <option value="baiao">Baião de Dois</option>
+    <option value="lencois">Lençóis Maranhenses</option>
+    <option value="vaqueiro">Vaqueiro</option>
+  </select>
+  <button class="btn" id="btn-quiz">Descobrir</button>
+</div>
+<div id="quiz-saida" class="quiz-saida"></div>
 </main>
-<footer>
-<p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
-<p id="ultimaModificacao"></p>
-</footer>
+<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
 </body>
 </html>

@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gastronomia do Nordeste - do baião de dois ao acarajé, sabores do sertão ao mar">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gastronomia | Sertão ao Mar</title>
+<meta name="description" content="Da carne de sol com macaxeira ao acarajé da Bahia. Descubra os pratos típicos, ingredientes e segredos da culinária nordestina.">
 <meta name="author" content="Bernardo Soares">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
-<title>Gastronomia - Sertão ao Mar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="estilos/style.css">
+<script src="scripts/script.js" defer></script>
+
 </head>
 <body>
 <header><div class="header-content">
@@ -24,7 +30,7 @@
 <main>
   <section class="hero">
     <picture>
-      <img src="imagens/gastronomia.jpg" alt="Mesa nordestina" width="1200" height="600" loading="lazy">
+      <img src="imagens/gastronomia.webp" alt="Mesa nordestina" width="1200" height="600" loading="eager" fetchpriority="high">
     </picture>
       <div class="hero-texto">
         <h1>Do Sertão ao Mar na Panela</h1>
@@ -33,42 +39,42 @@
   </section>
 
   <div class="secionador">
-    <button data-filtro="todos" class="ativo" onclick="filtrarComidas('todos')">Todos</button>
-    <button data-filtro="sertao" onclick="filtrarComidas('sertao')">Sertão</button>
-    <button data-filtro="litoral" onclick="filtrarComidas('litoral')">Litoral</button>
+    <button data-filtro="todos" class="ativo">Todos</button>
+    <button data-filtro="sertao">Sertão</button>
+    <button data-filtro="litoral">Litoral</button>
   </div>
 
   <div id="lista-comidas" class="grid"></div>
 
-  <section style="margin-top:3rem;">
+  <section class="espacada">
     <h2>Mais Sabores pra Conhecer</h2>
     <div class="grid">
       <article class="card" data-tipo="sertao">
-        <img src="imagens/buchada-bode.jpg" alt="Buchada de bode prato típico" loading="lazy" width="600" height="400">
+        <img src="imagens/buchada-bode.webp" alt="Buchada de bode prato típico" loading="lazy" width="600" height="400">
         <div class="conteudo"><h3>Buchada de Bode</h3><p>Prato do sertanejo raiz. Vísceras bem temperadas cozidas no bucho.</p></div>
       </article>
       <article class="card" data-tipo="litoral">
-        <img src="imagens/caruru-vatapa.jpg" alt="Caruru com dendê" loading="lazy" width="600" height="400">
+        <img src="imagens/caruru-vatapa.webp" alt="Caruru com dendê" loading="lazy" width="600" height="400">
         <div class="conteudo"><h3>Caruru e Vatapá</h3><p>Base de dendê, camarão, castanha e gengibre. Herança africana viva.</p></div>
       </article>
       <article class="card" data-tipo="sertao">
-        <img src="imagens/pacoca-carne-sol.jpg" alt="Paçoca de carne de sol" loading="lazy" width="600" height="400">
+        <img src="imagens/pacoca-carne-sol.webp" alt="Paçoca de carne de sol" loading="lazy" width="600" height="400">
         <div class="conteudo"><h3>Paçoca de Carne de Sol</h3><p>Carne socada no pilão com farinha e cebola. A comida do vaqueiro.</p></div>
       </article>
       <article class="card" data-tipo="litoral">
-        <img src="imagens/cocada-doce-coco.jpg" alt="Cocada e doces de coco" loading="lazy" width="600" height="400">
+        <img src="imagens/cocada-doce-coco.webp" alt="Cocada e doces de coco" loading="lazy" width="600" height="400">
         <div class="conteudo"><h3>Cocada e Doce de Coco</h3><p>Do Maranhão ao Rio Grande do Norte, o coco vira cocada branca, queimada e baba de moça.</p></div>
       </article>
     </div>
   </section>
 
-  <section style="margin-top:3rem;">
+  <section class="espacada">
     <h2>Seus Favoritos</h2>
     <ul id="favoritos-lista"></ul>
     <p id="contador-fav"></p>
   </section>
 
-  <section style="margin-top:3rem;">
+  <section class="espacada">
     <h2>Avalie um Prato</h2>
     <form id="form-avaliacao">
       <label>Seu nome: <input id="nome" type="text" required placeholder="Ex: Bernardo"></label>

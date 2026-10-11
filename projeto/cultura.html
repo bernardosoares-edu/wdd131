@@ -2,12 +2,14 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cultura e Festas do Nordeste - quadrilha, bumba meu boi, forró e cordel">
-<meta name="author" content="Bernardo Soares">
 <title>Sertão ao Mar - Cultura</title>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<meta name="description" content="Festas juninas, forró, frevo e maracatu. Mergulhe nas manifestações culturais mais vibrantes do Nordeste e suas histórias.">
+<meta name="author" content="Bernardo Soares">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos/style.css">
+<script src="scripts/script.js" defer></script>
 </head>
 <body>
 <header><div class="header-content">
@@ -24,7 +26,7 @@
 <main>
   <section class="hero">
     <picture>
-      <img src="imagens/cultura.jpg" alt="Cultura e Festas que Resistem" width="1200" height="600" loading="lazy">
+      <img src="imagens/cultura.jpg" alt="Cultura e Festas que Resistem" width="1200" height="600" loading="eager" fetchpriority="high">
     </picture>
       <div class="hero-texto">
         <h1>Cultura e Festas que Resistem</h1>
@@ -70,6 +72,6 @@
   <form id="form-contato"><label>Nome: <input id="nome" required></label><label>Email: <input id="email" type="email" required></label><label>Origem: <select id="origem"><option>Sertão</option><option>Litoral</option><option>Ambos</option></select></label><button class="btn">Enviar</button></form>
   <p id="form-msg"></p><p id="contador-inscritos"></p>
 </main>
-<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p></footer>
+<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
 </body>
 </html>

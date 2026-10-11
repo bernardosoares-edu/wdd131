@@ -1,7 +1,7 @@
 const comidas = [
   { id: 1, nome: "Baião de Dois", tipo: "sertao", origem: "Sertão", desc: "Arroz, feijão de corda, queijo coalho e carne de sol.", imagem: "baiao-de-dois.jpg" },
   { id: 2, nome: "Carne de Sol com Macaxeira", tipo: "sertao", origem: "Sertão", desc: "Clássico sertanejo resistente como o povo.", imagem: "carne-sol-macaxeira.jpg" },
-  { id: 3, nome: "Acarajé", tipo: "litoral", origem: "Litoral", desc: "Bolinho de feijão fradinho frito no dendê com vatapá.", imagem: "acaraje.jpg" },
+  { id: 3, nome: "Acarajé", tipo: "litoral", origem: "Litoral", desc: "Bolinho de feijão fradinho frito no dendê com vatapá.", imagem: "acaraje.webp" },
   { id: 4, nome: "Moqueca Baiana", tipo: "litoral", origem: "Litoral", desc: "Peixe, leite de coco, dendê e coentro.", imagem: "moqueca-baiana.jpg" },
   { id: 5, nome: "Tapioca Recheada", tipo: "sertao", origem: "Ambos", desc: "Herança indígena que atravessou sertão e mar.", imagem: "tapioca-recheada.jpg" }
 ];
@@ -150,4 +150,25 @@ document.addEventListener("DOMContentLoaded", () => {
   configurarFormularioGastronomia();
   atualizarContadorInscritos();
   configurarFooter();
+  document.getElementById('btn-quiz')?.addEventListener('click', quizNordestino);
 });
+
+function quizNordestino(){
+  const select = document.getElementById('quiz-resposta');
+  const saida = document.getElementById('quiz-saida');
+  if(!select ||!saida) return;
+  const r = select.value;
+  if(!r){
+    saida.textContent = "Escolha uma opção primeiro!";
+    return;
+  }
+  const respostas = {
+    forro: "Boa! Forró é a alma do São João no Nordeste!",
+    baiao: "Delícia! Baião de Dois é patrimônio do sertão.",
+    lencois: "Lindo! Lençóis Maranhenses fica no Maranhão.",
+    vaqueiro: "Resistência! Vaqueiro é símbolo de força e fé do sertão."
+  };
+  saida.textContent = respostas[r];
+  localStorage.setItem("ultimoQuizSertao", r);
+}
+
