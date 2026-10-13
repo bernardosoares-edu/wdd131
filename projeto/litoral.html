@@ -1,103 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Litoral - Sertão ao Mar</title>
-<meta name="description" content="Do frevo ao maracatu, do acarajé às praias paradisíacas. Conheça a cultura vibrante e os sabores do litoral nordestino.">
-<meta name="author" content="Bernardo Soares">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilos/style.css">
-<script src="scripts/script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Litoral - Sertão ao Mar</title>
+  <meta name="description"
+    content="Do frevo ao maracatu, do acarajé às praias paradisíacas. Conheça a cultura vibrante e os sabores do litoral nordestino.">
+  <meta name="author" content="Bernardo Soares">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="estilos/style.css">
+  <script src="scripts/script.js" defer></script>
 
 </head>
+
 <body>
-<header><div class="header-content">
-<div class="logo">SERTÃO AO MAR 🌵🌊</div>
-<button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
-<nav><ul id="nav-lista">
-<li><a href="index.html">Início</a></li>
-<li><a href="sertao.html">Sertão</a></li>
-<li><a href="litoral.html">Litoral</a></li>
-<li><a href="cultura.html">Cultura</a></li>
-<li><a href="gastronomia.html">Gastronomia</a></li>
-</ul></nav></div></header>
-
-<main>
-  <section class="hero">
-  <picture>
-    <img src="imagens/praia-nordeste.webp" alt="Praia Nordestina" width="1200" height="600" loading="eager" fetchpriority="high">
-    </picture>
-    <div class="hero-texto">
-      <h1>Do Coqueiro ao Dendê: Paraísos do Litoral</h1>
-      <p>3.300 km de costa. Das piscinas de Porto de Galinhas ao único Delta em mar aberto das Américas.</p>
+  <header>
+    <div class="header-content">
+      <div class="logo">SERTÃO AO MAR 🌵🌊</div>
+      <button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+      <nav>
+        <ul id="nav-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sertao.html">Sertão</a></li>
+          <li><a href="litoral.html">Litoral</a></li>
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
-  
-  <div class="secionador">
-    <button data-filtro="todos" class="ativo">Todos</button>
-    <button data-filtro="paraiso">Paraísos</button>
-    <button data-filtro="aventura">Aventura</button>
-    <button data-filtro="unico">Únicos no Mundo</button>
-  </div>
+  </header>
 
-  <div class="grid">
-    <article class="card" data-tipo="unico">
-      <img src="imagens/delta-parnaiba.webp" alt="Delta do Parnaíba com ilhas e revoada de guarás" loading="lazy" width="800" height="457">
-      <div class="conteudo">
-        <h3>Delta do Parnaíba - PI/MA</h3>
-        <p><strong>O único Delta em mar aberto das Américas.</strong> São 85 ilhas, dunas, manguezais e a Revoada dos Guarás vermelhos no pôr do sol. Passeio de barco saindo de Tutóia ou Parnaíba. Turismo ecológico puro.</p>
+  <main>
+    <section class="hero">
+      <picture>
+        <img src="imagens/praia-nordeste.webp" alt="Praia Nordestina" width="1200" height="600" loading="eager"
+          fetchpriority="high">
+      </picture>
+      <div class="hero-texto">
+        <h1>Do Coqueiro ao Dendê: Paraísos do Litoral</h1>
+        <p>3.300 km de costa. Das piscinas de Porto de Galinhas ao único Delta em mar aberto das Américas.</p>
       </div>
-    </article>
+    </section>
 
-    <article class="card" data-tipo="paraiso">
-      <img src="imagens/lencois.jpg" alt="Lençóis Maranhenses com lagoas azuis" loading="lazy" width="500" height="281">
-      <div class="conteudo">
-        <h3>Lençóis Maranhenses - MA</h3>
-        <p>Deserto de areia branca com lagoas de água doce e cristalina entre as dunas. Melhor época: julho a setembro, quando as lagoas estão cheias. De Barreirinhas de 4x4.</p>
-      </div>
-    </article>
+    <div class="secionador">
+      <button data-filtro="todos" class="ativo">Todos</button>
+      <button data-filtro="paraiso">Paraísos</button>
+      <button data-filtro="aventura">Aventura</button>
+      <button data-filtro="unico">Únicos no Mundo</button>
+    </div>
 
-    <article class="card" data-tipo="paraiso">
-      <img src="imagens/porto.webp" alt="Piscinas naturais de Porto de Galinhas" loading="lazy" width="474" height="296">
-      <div class="conteudo">
-        <h3>Porto de Galinhas - PE</h3>
-        <p>Piscinas naturais mornas formadas pelos recifes. Na maré baixa, jangada até os peixinhos. À noite, vila agitada com lojinhas e forró.</p>
-      </div>
-    </article>
+    <div class="grid">
+      <article class="card" data-tipo="unico">
+        <img src="imagens/delta-parnaiba.webp" alt="Delta do Parnaíba com ilhas e revoada de guarás" loading="lazy"
+          width="800" height="457">
+        <div class="conteudo">
+          <h3>Delta do Parnaíba - PI/MA</h3>
+          <p><strong>O único Delta em mar aberto das Américas.</strong> São 85 ilhas, dunas, manguezais e a Revoada dos
+            Guarás vermelhos no pôr do sol. Passeio de barco saindo de Tutóia ou Parnaíba. Turismo ecológico puro.</p>
+        </div>
+      </article>
 
-    <article class="card" data-tipo="paraiso">
-      <img src="imagens/maragogi.webp" alt="Galés de Maragogi águas transparentes" loading="lazy" width="900" height="472">
-      <div class="conteudo">
-        <h3>Maragogi - AL - Caribe Brasileiro</h3>
-        <p>As Galés a 6km da costa. Mergulho com snorkel em água transparente. Fica entre Maceió e Recife, perfeito pra bate e volta.</p>
-      </div>
-    </article>
+      <article class="card" data-tipo="paraiso">
+        <img src="imagens/lencois.webp" alt="Lençóis Maranhenses com lagoas azuis" loading="lazy" width="500"
+          height="281">
+        <div class="conteudo">
+          <h3>Lençóis Maranhenses - MA</h3>
+          <p>Deserto de areia branca com lagoas de água doce e cristalina entre as dunas. Melhor época: julho a
+            setembro, quando as lagoas estão cheias. De Barreirinhas de 4x4.</p>
+        </div>
+      </article>
 
-    <article class="card" data-tipo="aventura">
-      <img src="imagens/jericoacoara.jpg" alt="Dunas de Jericoacoara e Pedra Furada" loading="lazy" width="600" height="400">
-      <div class="conteudo">
-        <h3>Jericoacoara - CE</h3>
-        <p>Ruas de areia, Lagoa do Paraíso e a famosa Pedra Furada. Wind e kite na Praia do Preá. Pôr do sol na Duna do Pôr do Sol é ritual diário.</p>
-      </div>
-    </article>
+      <article class="card" data-tipo="paraiso">
+        <img src="imagens/porto.webp" alt="Piscinas naturais de Porto de Galinhas" loading="lazy" width="474"
+          height="296">
+        <div class="conteudo">
+          <h3>Porto de Galinhas - PE</h3>
+          <p>Piscinas naturais mornas formadas pelos recifes. Na maré baixa, jangada até os peixinhos. À noite, vila
+            agitada com lojinhas e forró.</p>
+        </div>
+      </article>
 
-    <article class="card" data-tipo="unico">
-      <img src="imagens/morro-sao-paulo.webp" alt="Morro de São Paulo Bahia" loading="lazy" width="800" height="450">
-      <div class="conteudo">
-        <h3>Morro de São Paulo - BA</h3>
-        <p>Ilha sem carros em Tinharé. 4 praias numeradas, tirolesa e mirante. Travessia de lancha saindo de Salvador em 2h. Clima rústico-chique.</p>
-      </div>
-    </article>
-  </div>
+      <article class="card" data-tipo="paraiso">
+        <img src="imagens/maragogi.webp" alt="Galés de Maragogi águas transparentes" loading="lazy" width="900"
+          height="472">
+        <div class="conteudo">
+          <h3>Maragogi - AL - Caribe Brasileiro</h3>
+          <p>As Galés a 6km da costa. Mergulho com snorkel em água transparente. Fica entre Maceió e Recife, perfeito
+            pra bate e volta.</p>
+        </div>
+      </article>
 
-  <section class="destaque-rota">
-    <h2>📍 Rota das Emoções</h2>
-    <p>Junte tudo em uma viagem só: <strong>Lençóis Maranhenses (MA) → Delta do Parnaíba (PI) → Jericoacoara (CE).</strong> São 3 estados, 3 biomas e 500km de aventura de jipe, barco e buggy.</p>
-  </section>
-</main>
+      <article class="card" data-tipo="aventura">
+        <img src="imagens/jericoacoara.webp" alt="Dunas de Jericoacoara e Pedra Furada" loading="lazy" width="600"
+          height="400">
+        <div class="conteudo">
+          <h3>Jericoacoara - CE</h3>
+          <p>Ruas de areia, Lagoa do Paraíso e a famosa Pedra Furada. Wind e kite na Praia do Preá. Pôr do sol na Duna
+            do Pôr do Sol é ritual diário.</p>
+        </div>
+      </article>
 
-<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
+      <article class="card" data-tipo="unico">
+        <img src="imagens/morro-sao-paulo.webp" alt="Morro de São Paulo Bahia" loading="lazy" width="800" height="450">
+        <div class="conteudo">
+          <h3>Morro de São Paulo - BA</h3>
+          <p>Ilha sem carros em Tinharé. 4 praias numeradas, tirolesa e mirante. Travessia de lancha saindo de Salvador
+            em 2h. Clima rústico-chique.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="destaque-rota">
+      <h2>📍 Rota das Emoções</h2>
+      <p>Junte tudo em uma viagem só: <strong>Lençóis Maranhenses (MA) → Delta do Parnaíba (PI) → Jericoacoara
+          (CE).</strong> São 3 estados, 3 biomas e 500km de aventura de jipe, barco e buggy.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
+    <p id="ultimaModificacao"></p>
+    <p class="contador" id="visitas"></p>
+  </footer>
 </body>
+
 </html>

@@ -1,15 +1,15 @@
 const comidas = [
-  { id: 1, nome: "Baião de Dois", tipo: "sertao", origem: "Sertão", desc: "Arroz, feijão de corda, queijo coalho e carne de sol.", imagem: "baiao-de-dois.jpg" },
-  { id: 2, nome: "Carne de Sol com Macaxeira", tipo: "sertao", origem: "Sertão", desc: "Clássico sertanejo resistente como o povo.", imagem: "carne-sol-macaxeira.jpg" },
+  { id: 1, nome: "Baião de Dois", tipo: "sertao", origem: "Sertão", desc: "Arroz, feijão de corda, queijo coalho e carne de sol.", imagem: "baiao-de-dois.webp" },
+  { id: 2, nome: "Carne de Sol com Macaxeira", tipo: "sertao", origem: "Sertão", desc: "Clássico sertanejo resistente como o povo.", imagem: "carne-sol-macaxeira.webp" },
   { id: 3, nome: "Acarajé", tipo: "litoral", origem: "Litoral", desc: "Bolinho de feijão fradinho frito no dendê com vatapá.", imagem: "acaraje.webp" },
-  { id: 4, nome: "Moqueca Baiana", tipo: "litoral", origem: "Litoral", desc: "Peixe, leite de coco, dendê e coentro.", imagem: "moqueca-baiana.jpg" },
-  { id: 5, nome: "Tapioca Recheada", tipo: "sertao", origem: "Ambos", desc: "Herança indígena que atravessou sertão e mar.", imagem: "tapioca-recheada.jpg" }
+  { id: 4, nome: "Moqueca Baiana", tipo: "litoral", origem: "Litoral", desc: "Peixe, leite de coco, dendê e coentro.", imagem: "moqueca-baiana.webp" },
+  { id: 5, nome: "Tapioca Recheada", tipo: "sertao", origem: "Ambos", desc: "Herança indígena que atravessou sertão e mar.", imagem: "tapioca-recheada.webp" }
 ];
 
 function iniciarMenu(){
   const btn = document.querySelector("#menu-btn");
   const lista = document.querySelector("#nav-lista");
-  if(!btn || !lista) return;
+  if(!btn ||!lista) return;
   btn.addEventListener("click", () => lista.classList.toggle("aberto"));
 }
 
@@ -25,16 +25,19 @@ function configurarSecionadores(){
   const grupos = document.querySelectorAll(".secionador");
   grupos.forEach(grupo => {
     const botoes = grupo.querySelectorAll("button[data-filtro]");
-    const cards = document.querySelectorAll(".grid .card[data-tipo]");
+    const cards = document.querySelectorAll(".grid .card[data-tipo], #lista-comidas .card[data-tipo]");
+
     botoes.forEach(btn => {
       btn.addEventListener("click", () => {
         botoes.forEach(b => b.classList.remove("ativo"));
         btn.classList.add("ativo");
         const filtro = btn.dataset.filtro;
+
         cards.forEach(card => {
           const mostrar = filtro === "todos" || card.dataset.tipo === filtro;
           card.classList.toggle("oculto", !mostrar);
         });
+
         if(document.querySelector("#lista-comidas")){
           filtrarComidas(filtro);
         }
@@ -46,7 +49,7 @@ function configurarSecionadores(){
 function renderizarComidas(filtro = "todos"){
   const container = document.querySelector("#lista-comidas");
   if(!container) return;
-  const filtradas = filtro === "todos" ? comidas : comidas.filter(c => c.tipo === filtro || c.origem === "Ambos");
+  const filtradas = filtro === "todos"? comidas : comidas.filter(c => c.tipo === filtro || c.origem === "Ambos");
   container.innerHTML = filtradas.map(comida => {
     const favs = obterFavoritos();
     const ehFav = favs.includes(comida.id);
@@ -57,12 +60,10 @@ function renderizarComidas(filtro = "todos"){
           <h3>${comida.nome}</h3>
           <p><strong>Origem:</strong> ${comida.origem}</p>
           <p>${comida.desc}</p>
-          <button class="btn btn-fav" data-id="${comida.id}">${ehFav ? '★ Favoritado' : '☆ Favoritar'}</button>
+          <button class="btn btn-fav" data-id="${comida.id}">${ehFav? '★ Favoritado' : '☆ Favoritar'}</button>
         </div>
       </article>`;
   }).join("");
-
-  // Event delegation sem onclick
   container.querySelectorAll(".btn-fav").forEach(b => {
     b.addEventListener("click", () => favoritarComida(Number(b.dataset.id)));
   });
@@ -76,7 +77,7 @@ function filtrarComidas(tipo){
 function obterFavoritos(){ return JSON.parse(localStorage.getItem("favoritosSertaoMar") || "[]"); }
 function favoritarComida(id){
   let favs = obterFavoritos();
-  favs = favs.includes(id) ? favs.filter(f => f !== id) : [...favs, id];
+  favs = favs.includes(id)? favs.filter(f => f!== id) : [...favs, id];
   localStorage.setItem("favoritosSertaoMar", JSON.stringify(favs));
   renderizarComidas(localStorage.getItem("filtroComida") || "todos");
   mostrarFavoritos();
@@ -91,15 +92,22 @@ function mostrarFavoritos(){
   if(cont) cont.textContent = `Você tem ${favs.length} favorito(s) salvos.`;
 }
 
+function atualizarContadorInscritos(){
+  const lista = JSON.parse(localStorage.getItem("inscritosSertaoMar") || "[]");
+  const el = document.querySelector("#contador-inscritos");
+  if(el) el.textContent = `Total de inscritos: ${lista.length}`;
+}
+
 function configurarFormularioCultura(){
   const form = document.querySelector("#form-contato");
   if(!form) return;
+  atualizarContadorInscritos();
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const nome = form.querySelector("#nome").value.trim();
     const email = form.querySelector("#email").value.trim();
     const origem = document.querySelector("#origem")?.value;
-    if(!nome || !email){
+    if(!nome ||!email){
       document.querySelector("#form-msg").textContent = "Preencha nome e e-mail.";
       return;
     }
@@ -109,6 +117,47 @@ function configurarFormularioCultura(){
     document.querySelector("#form-msg").innerHTML = `Obrigado, <strong>${nome}</strong>!`;
     form.reset(); atualizarContadorInscritos();
   });
+}
+
+function configurarFormularioGastronomia(){
+  const form = document.getElementById("form-avaliacao");
+  if(!form) return;
+  const msg = document.getElementById("msg-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nome = document.getElementById("nome").value.trim();
+    const prato = document.getElementById("prato-select").value;
+    const nota = document.getElementById("nota").value;
+    const comentario = document.getElementById("comentario").value.trim();
+    if(!nome ||!prato){
+      if(msg) msg.textContent = "Preencha nome e escolha o prato.";
+      return;
+    }
+    const avaliacoes = JSON.parse(localStorage.getItem("avaliacoesSertaoMar") || "[]");
+    avaliacoes.push({ nome, prato, nota, comentario, data: new Date().toLocaleDateString("pt-BR") });
+    localStorage.setItem("avaliacoesSertaoMar", JSON.stringify(avaliacoes));
+    if(msg) msg.innerHTML = `Obrigado, <strong>${nome}</strong>! Você avaliou <strong>${prato}</strong> com nota ${nota}.`;
+    form.reset();
+  });
+}
+
+function quizNordestino(){
+  const select = document.getElementById('quiz-resposta');
+  const saida = document.getElementById('quiz-saida');
+  if(!select ||!saida) return;
+  const r = select.value;
+  if(!r){
+    saida.textContent = "Escolha uma opção primeiro!";
+    return;
+  }
+  const respostas = {
+    forro: "Boa! Forró é a alma do São João no Nordeste!",
+    baiao: "Delícia! Baião de Dois é patrimônio do sertão.",
+    lencois: "Lindo! Lençóis Maranhenses fica no Maranhão.",
+    vaqueiro: "Resistência! Vaqueiro é símbolo de força e fé do sertão."
+  };
+  saida.textContent = respostas[r] || "Boa escolha!";
+  localStorage.setItem("ultimoQuizSertao", r);
 }
 
 function configurarFooter(){
@@ -134,5 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarComidas(localStorage.getItem("filtroComida") || "todos");
   mostrarFavoritos();
   configurarFormularioCultura();
+  configurarFormularioGastronomia();
   configurarFooter();
+  document.getElementById('btn-quiz')?.addEventListener('click', quizNordestino);
 });

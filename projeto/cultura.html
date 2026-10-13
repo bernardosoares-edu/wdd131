@@ -1,99 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sertão ao Mar - Cultura</title>
-<meta name="description" content="Festas juninas, forró, frevo e maracatu. Mergulhe nas manifestações culturais mais vibrantes do Nordeste e suas histórias.">
-<meta name="author" content="Bernardo Soares">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilos/style.css">
-<script src="scripts/script.js" defer></script>
-</head>
-<body>
-<header><div class="header-content">
-<div class="logo">SERTÃO AO MAR 🌵🌊</div>
-<button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
-<nav><ul id="nav-lista">
-<li><a href="index.html">Início</a></li>
-<li><a href="sertao.html">Sertão</a></li>
-<li><a href="litoral.html">Litoral</a></li>
-<li><a href="cultura.html">Cultura</a></li>
-<li><a href="gastronomia.html">Gastronomia</a></li>
-</ul></nav></div></header>
 
-<main>
-  <section class="hero">
-    <picture>
-      <img src="imagens/cultura.jpg" alt="Cultura e Festas que Resistem" width="1200" height="600" loading="eager" fetchpriority="high">
-    </picture>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sertão ao Mar - Cultura</title>
+  <meta name="description"
+    content="Festas juninas, forró, frevo e maracatu. Mergulhe nas manifestações culturais mais vibrantes do Nordeste e suas histórias.">
+  <meta name="author" content="Bernardo Soares">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/style.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">SERTÃO AO MAR 🌵🌊</div>
+      <button id="menu-btn" aria-label="Abrir menu">☰ Menu</button>
+      <nav>
+        <ul id="nav-lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sertao.html">Sertão</a></li>
+          <li><a href="litoral.html">Litoral</a></li>
+          <li><a href="cultura.html">Cultura</a></li>
+          <li><a href="gastronomia.html">Gastronomia</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <img src="imagens/cultura.jpg" alt="Cultura e Festas que Resistem" width="1200" height="600" loading="eager"
+          fetchpriority="high">
+      </picture>
       <div class="hero-texto">
         <h1>Cultura e Festas que Resistem</h1>
         <p>Do casamento da quadrilha à ressurreição do Bumba Meu Boi, a cultura nordestina é teatro, fé e festa.</p>
       </div>
-  </section>
-   
-  <div class="secionador">
-    <button data-filtro="todos" class="ativo">Todos</button>
-    <button data-filtro="festa">Festas</button>
-    <button data-filtro="danca">Danças</button>
-    <button data-filtro="tradi">Tradições</button>
-  </div>
+    </section>
 
-  <div class="grid">
-    <article class="card" data-tipo="danca">
-      <img src="imagens/quadrilha.jpg" alt="Quadrilha junina com trajes coloridos" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Quadrilha Junina</h3><p>A dança do casamento matuto. Noiva grávida, padre atrapalhado, delegado e o marcador gritando anarriê e alavantú. Meses de ensaio e roupa de chita feita à mão.</p></div>
-    </article>
-    <article class="card" data-tipo="danca">
-      <img src="imagens/bumba-meu-boi.jpg" alt="Bumba Meu Boi com boi colorido" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Bumba Meu Boi</h3><p>Patrimônio Imaterial da Humanidade. O boi mais bonito da fazenda é roubado, morre e ressuscita pelas mãos do Pajé. Com Mateus, Catirina, Dono e Doutor.</p></div>
-    </article>
-    <article class="card" data-tipo="festa">
-      <img src="imagens/forro.jpg" alt="Sanfoneiro tocando forró" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Forró Pé-de-Serra</h3><p>Luiz Gonzaga, Dominguinhos e Elba. Sanfona, zabumba e triângulo. O ritmo que nasceu no sertão e ganhou o litoral.</p></div>
-    </article>
-    <article class="card" data-tipo="tradi">
-      <img src="imagens/cordel.jpg" alt="Folhetos de cordel pendurados" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Literatura de Cordel</h3><p>Poesia em folhetos pendurados no barbante. Lampião, Padre Cícero e as pelejas do vaqueiro contadas em versos de sextilha.</p></div>
-    </article>
-    <article class="card" data-tipo="tradi">
-      <img src="imagens/rendeira.jpg" alt="Rendeira fazendo renda de bilro" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Rendeiras e Barro</h3><p>Mãos que transformam. O barro de Mestre Vitalino em Caruaru e a renda de bilro das rendeiras do litoral cearense.</p></div>
-    </article>
-    <article class="card" data-tipo="tradi">
-      <img src="imagens/repente.jpg" alt="Cantadores de viola" loading="lazy" width="600" height="400">
-      <div class="conteudo"><h3>Repente e Cantoria</h3><p>Dois violeiros e o desafio do improviso. Versos feitos na hora sobre o cotidiano, a política e o amor.</p></div>
-    </article>
-  </div>
+    <div class="secionador">
+      <button data-filtro="todos" class="ativo">Todos</button>
+      <button data-filtro="festa">Festas</button>
+      <button data-filtro="danca">Danças</button>
+      <button data-filtro="tradi">Tradições</button>
+    </div>
+
+    <div class="grid">
+      <article class="card" data-tipo="danca">
+        <img src="imagens/quadrilha.webp" alt="Quadrilha junina com trajes coloridos" loading="lazy" width="600"
+          height="400">
+        <div class="conteudo">
+          <h3>Quadrilha Junina</h3>
+          <p>A dança do casamento matuto. Noiva grávida, padre atrapalhado, delegado e o marcador gritando anarriê e
+            alavantú. Meses de ensaio e roupa de chita feita à mão.</p>
+        </div>
+      </article>
+      <article class="card" data-tipo="danca">
+        <img src="imagens/bumba-meu-boi.webp" alt="Bumba Meu Boi com boi colorido" loading="lazy" width="600"
+          height="400">
+        <div class="conteudo">
+          <h3>Bumba Meu Boi</h3>
+          <p>Patrimônio Imaterial da Humanidade. O boi mais bonito da fazenda é roubado, morre e ressuscita pelas mãos
+            do Pajé. Com Mateus, Catirina, Dono e Doutor.</p>
+        </div>
+      </article>
+      <article class="card" data-tipo="festa">
+        <img src="imagens/forro.webp" alt="Sanfoneiro tocando forró" loading="lazy" width="600" height="400">
+        <div class="conteudo">
+          <h3>Forró Pé-de-Serra</h3>
+          <p>Luiz Gonzaga, Dominguinhos e Elba. Sanfona, zabumba e triângulo. O ritmo que nasceu no sertão e ganhou o
+            litoral.</p>
+        </div>
+      </article>
+      <article class="card" data-tipo="tradi">
+        <img src="imagens/cordel.webp" alt="Folhetos de cordel pendurados" loading="lazy" width="600" height="400">
+        <div class="conteudo">
+          <h3>Literatura de Cordel</h3>
+          <p>Poesia em folhetos pendurados no barbante. Lampião, Padre Cícero e as pelejas do vaqueiro contadas em
+            versos de sextilha.</p>
+        </div>
+      </article>
+      <article class="card" data-tipo="tradi">
+        <img src="imagens/rendeira.webp" alt="Rendeira fazendo renda de bilro" loading="lazy" width="600" height="400">
+        <div class="conteudo">
+          <h3>Rendeiras e Barro</h3>
+          <p>Mãos que transformam. O barro de Mestre Vitalino em Caruaru e a renda de bilro das rendeiras do litoral
+            cearense.</p>
+        </div>
+      </article>
+      <article class="card" data-tipo="tradi">
+        <img src="imagens/repente.webp" alt="Cantadores de viola" loading="lazy" width="600" height="400">
+        <div class="conteudo">
+          <h3>Repente e Cantoria</h3>
+          <p>Dois violeiros e o desafio do improviso. Versos feitos na hora sobre o cotidiano, a política e o amor.</p>
+        </div>
+      </article>
+    </div>
 
     <section class="form-secao">
-    <h2>Compartilhe sua tradição</h2>
-    <form id="form-contato">
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required autocomplete="name">
+      <h2>Compartilhe sua tradição</h2>
+      <form id="form-contato">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required autocomplete="name">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required autocomplete="email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
 
-      <label for="origem">Origem:</label>
-      <select id="origem" name="origem" required>
-        <option value="">Selecione...</option>
-        <option value="sertao">Sertão</option>
-        <option value="litoral">Litoral</option>
-        <option value="ambos">Ambos</option>
-      </select>
+        <label for="origem">Origem:</label>
+        <select id="origem" name="origem" required>
+          <option value="">Selecione...</option>
+          <option value="sertao">Sertão</option>
+          <option value="litoral">Litoral</option>
+          <option value="ambos">Ambos</option>
+        </select>
 
-      <label for="mensagem">Tradição:</label>
-      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Qual tradição você quer compartilhar?" required></textarea>
+        <label for="mensagem">Tradição:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Qual tradição você quer compartilhar?"
+          required></textarea>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-    <p id="form-msg"></p>
-    <p id="contador-inscritos"></p>
-  </section>
-</main>
-<footer><p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p><p id="ultimaModificacao"></p><p class="contador" id="visitas"></p></footer>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <p id="form-msg"></p>
+      <p id="contador-inscritos"></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;<span id="anoatual"></span> - Bernardo Soares - Brasil</p>
+    <p id="ultimaModificacao"></p>
+    <p class="contador" id="visitas"></p>
+  </footer>
 </body>
+
 </html>
